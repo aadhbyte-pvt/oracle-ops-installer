@@ -45,12 +45,12 @@
 
 set +x +v   # never trace: a trace would print the access token the moment it is handled
 
-INSTALLER_VERSION="0.3.0"
+INSTALLER_VERSION="0.3.1"
 
 # ---- Pinned Oracle OPS release. Changed only by a reviewed installer release (docs/DEVELOPER.md). ----------------------
 OPS_REPO_URL="https://github.com/Moon2998/oracle-ops.git"
-OPS_COMMIT="63fb7c162c6b7076129b8a1f02b7bdb9b2dd44f5"   # full commit id; nothing else is ever checked out
-OPS_VERSION="0.1.9"                                      # service/VERSION at OPS_COMMIT
+OPS_COMMIT="3299d8e33116c2d9b0387285e47f4fb6067cf52c"   # full commit id; nothing else is ever checked out
+OPS_VERSION="0.1.10"                                     # service/VERSION at OPS_COMMIT
 SUPPORTED_PLATFORMS="ol:7"                               # /etc/os-release ID:major; must be in the release's jdk.platforms
 SUPPORTED_ARCH="x86_64"
 # git's credential prompts for OPS_REPO_URL, answered by the temporary askpass helper (and nothing else is answered).
@@ -68,7 +68,7 @@ OPS_FILE_MANIFEST=(
   "956121fda5804cc2ad1d54464103acd980ce7318401b279a3789815640911517  deploy/scripts/ownership-lib.sh"
   "2c1009dcfcef35d51e4a574b40d31441fe823bfe1ef8337e29f17bb4de674d85  deploy/scripts/provision-java.sh"
   "fa5e69025690abaa746781dbb858a488842cc37fc54e970de786a0f0f2678c23  deploy/java-runtime.properties"
-  "e358d84552808a5c0bd6679d690c283b938ebe15c2bd843c898681d093213107  service/VERSION"
+  "fecf23c4b3c2c29381d4c14cacb998939eb53f5791b99ab7e4e0bc7972c44524  service/VERSION"
 )
 
 # ---- Oracle OPS database scripts: run in this order AS OPS_OWNER by Fresh Installation (lib/db-deploy.sh) ------------------
@@ -97,10 +97,10 @@ LIB_MANIFEST=(
   "a4b6b957711f0dc58f120864638d71e09c2b454eaf19ed54ad1d78d8e48ec941  lib/source.sh"
   "26092336d1610412984c55fa4569de3d9001159171adba69d8a732c3ca78cffa  lib/discover.sh"
   "5ac6b32a6834eeedb1d3e2d2484a0069800e1a915435aa128e00e755edba0c06  lib/api-keys.sh"
-  "bc3fe37446e26e17948b2183c545792ef9354a1c0dafe06193c4bcd890a6b04c  lib/api-catalogue.sh"
+  "e45ec2894f8649b3da028b21b9b2dd324a9abbe8704fc1589dc590f5de3bb47f  lib/api-catalogue.sh"
   "1346801899a84fd7062acfdb306d124f10bcb8d630e6b88f183ad96baa658c25  lib/db-tool.sh"
   "17435eed0a8d10406638c6e6f3a72b5ec3ab5b890d308e6f87d2381384409450  lib/db-deploy.sh"
-  "a1c5b0ec64c54ed4a5babd43389974a26b3b528b497e698542c48625657a9307  lib/ops-install.sh"
+  "9f39d7fe574f19263d3129535063b4f41d180a484c2f9dfe054b9b5992cd2e55  lib/ops-install.sh"
   "f9d672108166958b5dbb7dab4d03adc3c0a952adeb0818bfc62d0fd470d39e71  lib/ops-upgrade.sh"
   "fd17695ed722df47dc555a5123725c3ead4eacd7d6a40691ebab5d3bb8dbc1c5  lib/ops-deinstall.sh"
   "16968d75e23f7c223750c780e899db88277794bb24cc87a434aaea039917c0a2  lib/ops-credentials.sh"

@@ -102,7 +102,8 @@ Enter them in APEX (Workspace Utilities > Web Credentials), then press Enter: th
 keys private and do not copy the screen into e-mails, chats or tickets.
 
 When APEX/ORDS runs on another server, the API uses plain HTTP between the two servers. Allow the port only from the
-APEX/ORDS server in your firewall.
+APEX/ORDS server in your firewall. That server can call every API, including start/stop once `ebs.control.enabled` is `true`.
+When HTTPS is added later, regenerate both API keys.
 
 ## After the installation
 
